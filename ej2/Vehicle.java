@@ -4,6 +4,6 @@ public interface Vehicle {
     Integer wheels = 0;
     public Integer passengers = 0;
 
-    void speedUp(Integer i);
-    void speedDown(Integer i);
+    public void speedUp(Integer i);
+    public void speedDown(Integer i);
 }
