@@ -20,6 +20,20 @@ public class TextManipulator {
 		return rev;
 	}
 
+	public String recursiveReverseString(String rev, int i) {
+		//si text está vacío, retornar
+		if(this.text.isEmpty()) return "";
+		//si el índice es igual o mayor, retornar
+		else if(i>=this.text.length()) return rev;
+		//de lo contrario retornar la cadena
+		else {
+			i++;
+			rev += this.text.charAt(text.length()-i);
+			return recursiveReverseString(rev,i); 
+		}
+		
+	}
+
 	public void setText(String text) {
 		this.text = text;
 	}
