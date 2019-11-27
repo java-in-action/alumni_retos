@@ -1,1 +1,4 @@
-Rama para programas de Luis Daniel Hernandez Carrera l.hernandez.carrera
+Programas para entrenamiento en Java
+
+Jesus Adel Leon Ortiz
+jesus.leon.ortiz
