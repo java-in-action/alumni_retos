@@ -33,9 +33,26 @@ public class TextManipulator {
 		}
 		
 	}
+	
+	public boolean palindromeTest() {
+		String rev = reverseString();
+		rev = stripWhitespace(rev);
+		String dst = stripWhitespace(text);
+		if(rev.toLowerCase().equals(dst.toLowerCase())) return true;
+		else return false;
+	}
+	
+	private String stripWhitespace(String str) {
+		String stripped = "";
+		for(int i=0; i<str.length(); i++) {
+			if(!Character.isWhitespace(str.charAt(i)))
+				stripped+=str.charAt(i);
+		}
+		return stripped;
+	}
 
 	public void setText(String text) {
 		this.text = text;
 	}
-
+	
 }
