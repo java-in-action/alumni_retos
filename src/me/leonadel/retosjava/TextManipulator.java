@@ -1,5 +1,7 @@
 package me.leonadel.retosjava;
 
+import java.util.regex.Pattern;
+
 public class TextManipulator {
 	
 	private String text;
@@ -35,9 +37,9 @@ public class TextManipulator {
 	}
 	
 	public boolean palindromeTest() {
-		String rev = reverseString();
-		rev = stripWhitespace(rev);
-		String dst = stripWhitespace(text);
+		String rev = reverseString().replaceAll("\\s", "");
+		String dst = text.replaceAll("\\s", "");
+		System.out.println(dst);
 		if(rev.toLowerCase().equals(dst.toLowerCase())) return true;
 		else return false;
 	}
